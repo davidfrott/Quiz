@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(to bottom right, #001f3f, #003366);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+}
+
+.screen {
+    display: none;
+    padding: 30px;
+    background-color: rgba(0, 0, 51, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    width: 80%;
+    max-width: 500px;
+    animation: fadeIn 0.8s ease forwards;
+    text-align: center;
+}
+
+h1, h2 {
+    color: white;
+}
+
+#score {
+    font-size: 20px;
+    color: lightgreen;
+    margin-bottom: 15px;
+}
+
+#question {
+    margin-top: 0;
+    font-size: 18px;
+    color: white;
+}
+
+button {
+    padding: 12px 24px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    background-color: #4285F4;
+    color: white;
+    width: 200px;
+    transition: transform 0.2s, background-color 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #3367D6;
+    transform: scale(1.05);
+}
+
+#timer {
+    font-size: 18px;
+    color: lightcoral;
+}
+
+#answers button {
+    width: 80%;
+}
+
+.timer-container {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 10px;
+    background-color: lightgreen;
+    width: 100%;
+    transition: width 1s linear;
+}
+
+ol {
+    text-align: left;
+    display: inline-block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.correct {
+    background-color: green !important;
+    color: white;
+}
+
+.incorrect {
+    background-color: red !important;
+    color: white;
+}
